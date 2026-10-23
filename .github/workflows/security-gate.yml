@@ -1,0 +1,9 @@
+name: Security Gate
+on: [pull_request]
+
+jobs:
+    audit:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: npm run audit:security
